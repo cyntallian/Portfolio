@@ -1,5 +1,6 @@
 "use client"
 import "./App.css"
+import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function App() {
   const handleFormSubmit = (e) => {
@@ -52,7 +53,7 @@ function App() {
           <img src="/profile.jpg" alt="John Mark L. Fernando Profile" className="profile-img" />
           <div className="about-text">
             <p>
-              I'm a passionate full-stack developer with over 5 years of experience creating digital solutions that make
+              I'm a passionate full-stack developer with over 2 years of experience creating digital solutions that make
               a difference.
             </p>
             <p>
@@ -74,7 +75,7 @@ function App() {
             skills="React, Vue.js, JavaScript, TypeScript, HTML5, CSS3, Sass"
           />
           <SkillCard icon="⚙️" title="Backend Development" skills="Node.js, Python, Express.js, Django, REST APIs" />
-          <SkillCard icon="🗄️" title="Database & Cloud" skills="MongoDB, PostgreSQL, MySQL, AWS, Docker, Firebase" />
+          <SkillCard icon="🗄️" title="Database & Cloud" skills="MongoDB, PostgreSQL, MySQL, AWS" />
           <SkillCard
             icon="🎨"
             title="UI/UX Design"
@@ -85,28 +86,37 @@ function App() {
 
       {/* Projects Section */}
       <section id="projects">
-        <h2>Featured Projects</h2>
+        <h2>Projects and Achievements</h2>
         <div className="projects-grid">
           <ProjectCard
-            title="E-commerce Platform"
-            image="/placeholder.svg?height=200&width=400"
-            description="A full-stack e-commerce solution built with React, Node.js, and MongoDB."
-            demoLink="#"
-            githubLink="#"
+            title="UrbanHive"
+            image="/urbanhive.jpeg?height=200&width=400"
+            description="A full-stack tenant and rent management solution built with Html, Node.js, and PostgreSQL."
           />
           <ProjectCard
-            title="Task Management App"
-            image="/placeholder.svg?height=200&width=400"
-            description="A collaborative task management app using Vue.js, Express.js, and Socket.io."
-            demoLink="#"
-            githubLink="#"
+            title="MRSP Competition"
+            image="/MRSP.jpeg?height=200&width=400"
+            description="Competition in AI in Robotics held at FEU Tech winning 2nd runner-up"
           />
           <ProjectCard
-            title="Weather Dashboard"
-            image="/placeholder.svg?height=200&width=400"
-            description="A responsive weather application with forecasts using weather APIs."
-            demoLink="#"
-            githubLink="#"
+            title="Partyrock LogoCraft App Creation"
+            image="/partyrock.jpeg?height=200&width=400"
+            description="A logo maker application that allows download having no watermarks"
+          />
+          <ProjectCard
+            title="Into the Clouds, The Future of Computing Seminar"
+            image="/cloudquest.png?height=200&width=400"
+            description="AWS Cloud Quest game having tasks related to cloud computing"
+          />
+          <ProjectCard
+            title="Quote Generator"
+            image="/quote.png?height=200&width=400"
+            description="A simple quote generator webiste that allows copying and sharing of quote"
+          />
+          <ProjectCard
+            title="Brigada Eskwela"
+            image="/brigada.jpg?height=200&width=400"
+            description="Brigada Eskwela held at V Mapa High School."
           />
         </div>
       </section>
@@ -153,19 +163,19 @@ function App() {
 
       {/* Footer */}
       <footer>
-        <div className="social-links">
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            🔗
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            🐱
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            💼
-          </a>
-        </div>
-        <p>&copy; 2025 John Mark L. Fernando. All Rights Reserved.</p>
-      </footer>
+  <div className="social-links">
+    <a href="https://www.facebook.com/jm.fernando.75" target="_blank" rel="noopener noreferrer">
+      <FaFacebook size={24} />
+    </a>
+    <a href="https://github.com/cyntallian" target="_blank" rel="noopener noreferrer">
+      <FaGithub size={24} />
+    </a>
+    <a href="https://www.linkedin.com/in/jm-fernando-8b3984155/" target="_blank" rel="noopener noreferrer">
+      <FaLinkedin size={24} />
+    </a>
+  </div>
+  <p>&copy; 2025 John Mark L. Fernando. All Rights Reserved.</p>
+</footer>
     </div>
   )
 }
@@ -186,14 +196,6 @@ const ProjectCard = ({ title, image, description, demoLink, githubLink }) => (
     <div className="project-content">
       <h3>{title}</h3>
       <p>{description}</p>
-      <div className="project-links">
-        <a href={demoLink} className="project-link" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-        <a href={githubLink} className="project-link" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-      </div>
     </div>
   </div>
 )
